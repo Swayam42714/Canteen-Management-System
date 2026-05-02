@@ -1,0 +1,13 @@
+
+.food-display-list{
+   display: grid;
+   grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
+   grid-template-rows: auto;
+   row-gap: 50px;
+   gap: 50px;
+}
+.food-display{
+    width: 87%;
+    margin: 50px auto;
+    padding: 0 20px;
+}

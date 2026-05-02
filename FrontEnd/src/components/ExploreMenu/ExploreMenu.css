@@ -1,0 +1,10 @@
+.explore-menu{
+    display: flex;
+    justify-content: center;
+}
+.explore-menu p{
+font-size: 30px;
+}
+.explore-menu span{
+    color: tomato;
+}

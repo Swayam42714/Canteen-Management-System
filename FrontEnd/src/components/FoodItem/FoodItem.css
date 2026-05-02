@@ -1,0 +1,64 @@
+.food-item{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+}
+.food-item-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 4px;
+}
+.food-item-img-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    
+}
+.food-item-image{
+    width: auto;
+    border-radius: 10px;
+}
+.food-item-name{
+    font-size: 24px;
+    color: rgb(212, 210, 210);
+}
+.food-item-desc{
+    font-size: 20px;
+    color: rgb(140, 139, 139);
+}
+.food-item-price{
+    color: tomato;
+    font-size: 20px;
+    font-weight: bold;
+}
+.add-icon{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.food-item-counter{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    border-radius: 50px;
+    background-color: white;
+}
+.food-item-counter img{
+    width: 30px;
+    
+}
+
