@@ -6,7 +6,8 @@ import validator from "validator"
 
 //Login user
 const loginUser=async(req,res)=>{
-    const {email,password}=req.body;
+    const {password}=req.body;
+    const email = req.body.email?.trim().toLowerCase();
     try{
         const user=await userModel.findOne({email});
         if(!user){
@@ -24,12 +25,17 @@ const loginUser=async(req,res)=>{
     }
 }
 const createToken=(id)=>{
+    if (!process.env.JWT_SECRET) {
+        throw new Error("JWT_SECRET is missing. Add it to BackEnd/.env");
+    }
+
     return jwt.sign({id},process.env.JWT_SECRET)
 }
 
 //register user
 const registerUser=async(req,res)=>{
-    const {name,password,email}=req.body;
+    const {name,password}=req.body;
+    const email = req.body.email?.trim().toLowerCase();
     try{
         //checking if user already exists
         const exists= await userModel.findOne({email})
@@ -60,7 +66,8 @@ const registerUser=async(req,res)=>{
         
 
     }catch(error){
-        console.log({success:false,message:"Error"});
+        console.log(error);
+        res.json({success:false,message:"Error"});
     }
 }
 export {loginUser, registerUser}

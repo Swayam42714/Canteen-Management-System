@@ -1,0 +1,12 @@
+{
+  "name": "canteen-management-system",
+  "private": true,
+  "scripts": {
+    "install:all": "npm --prefix BackEnd install && npm --prefix FrontEnd install && npm --prefix BackEnd/admin install",
+    "build": "npm --prefix BackEnd run build",
+    "start": "npm --prefix BackEnd start",
+    "dev:backend": "npm --prefix BackEnd run server",
+    "dev:frontend": "npm --prefix FrontEnd run dev",
+    "dev:admin": "npm --prefix BackEnd/admin run dev"
+  }
+}
