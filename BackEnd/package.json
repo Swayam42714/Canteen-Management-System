@@ -6,6 +6,7 @@
   "scripts": {
   "server":"nodemon server.js",
   "start":"node server.js",
+  "prebuild":"npm --prefix ../FrontEnd install && npm --prefix admin install",
   "build:frontend":"npm --prefix ../FrontEnd run build",
   "build:admin":"npm --prefix admin run build",
   "build":"npm run build:frontend && npm run build:admin"
